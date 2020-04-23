@@ -13,6 +13,7 @@ public class AppMain {
 
 
         AnimalFood food = new AnimalFood();
+
         System.out.println();
         System.out.println(food.name);
         System.out.println(food.price);
