@@ -11,9 +11,7 @@ public class AppMain {
         System.out.println("Nivelul senzatiei de foame al animalului este: " + pet.hungerLevel);
         System.out.println("Nivelul starii de spirit al animalului este: " + pet.moodLevel);
 
-
         AnimalFood food = new AnimalFood();
-
         System.out.println();
         System.out.println(food.name);
         System.out.println(food.price);
