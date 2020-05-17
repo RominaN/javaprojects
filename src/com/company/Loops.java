@@ -2,7 +2,7 @@ package com.company;
 
 import javax.swing.*;
 
-public class lab4 {
+public class Loops {
 
     //Exercitiul 1 for
 
@@ -86,15 +86,19 @@ public class lab4 {
 
 
     //Exercitiul 9 for
-    public void star(String n) {
-        n = "*";
-        for (int i = 7; i >= 1; i--) {
-            System.out.println();
-            {
-                for (int j = 1; j <= 7; j++)
-                    System.out.print("*");
+    public void star() {
+        for (int j = 7; j >= 1; j--) {
+
+            String text = "";
+
+            for (int i = j; i >= 1; i--) {
+
+                text = text + "*";
 
             }
+
+            System.out.println(text);
+
         }
     }
 

@@ -1,26 +1,108 @@
 package com.company;
 
-public class Main {
+ public class Main {
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
 
-        printMyName();
+        /*printMyName();
         printSum();
         printHi();
-        printOp();
-        System.out.println("Rezultatul adunarii este: " + adunare(5, 3));
-        System.out.println("Rezultatul scaderii este: " + scadere(5, 3));
-        System.out.println("Rezultatul inmultirii este: " + inmultire(5, 3));
-        System.out.println("Rezultatul impartirii este: " + impartire(5, 3));
-        System.out.println();
+        printOp(); */
+
+         Calculator calc = new Calculator();
+         System.out.println("Rezultatul adunarii este: " + calc.add(5, 3));
+         System.out.println("Rezultatul adunarii cu trei paramentrii este: " + calc.add(2,3,2));
+         System.out.println("Rezultatul adunarii cu variabile de tip float este: " + calc.add(5.7,3));
+
+         System.out.println("Rezultatul scaderii este: " + calc.scadere(5, 3));
+         System.out.println("Rezultatul inmultirii este: " + calc.inmultire(5, 3));
+         System.out.println("Rezultatul impartirii este: " + calc.impartire(5, 3));
+         System.out.println();
+
+         LogicalOp op = new LogicalOp();
+         int biggest = op.checkBiggerNumber(8, 5);
+         System.out.println("Cel mai mare numar este: " + biggest);
+
+         String vorbe = op.checkText("FastTrackIt");
+         System.out.println(vorbe);
+
+         Loops lb4 = new Loops();
+         //int numar = 5;
+         //lb4.display (numar);
+         //int numar2 = 50;
+          // lb4.displayMinus(numar2);
+         lb4.counting(-5,10);
+         System.out.println("exercitiul 4");
+         lb4.comparing(5,3);
+         System.out.println("exercitiul 5");
+         lb4.par();
+         System.out.println("exercitiul 6");
+         lb4.impar();
+
+         System.out.println("exercitiul 7");
+         lb4.suma(95);
+
+         System.out.println("exercitiul 8");
+         lb4.average(95);
+
+         System.out.println("exercitiul 9");
+         lb4.star();
+
+         System.out.println();
+         System.out.println("exercitiul 1 while");
+         lb4.displayHundred(96);
+
+         System.out.println("exercitiul 2 while");
+         lb4.displayMinus2(-97);
+
+         System.out.println("exercitiul 3 while");
+         lb4.comparing2(5,10);
+
+         System.out.println("exercitiul 4 while");
+         lb4.comparing3(5,10);
+
+         System.out.println("exercitiul 5 while");
+         lb4.par2();
+
+         System.out.println("exercitiul 7 while");
+         lb4.average2();
+
+         System.out.println("exercitiul 9 while");
+         lb4.fibonacci();
+
+         System.out.println("exercitiul 10 while");
+         lb4.CozaLozaWoza();
+
+         System.out.println();
+         Arrays array = new Arrays();
+         array.write();
+         array.evenNumber();
+         array.arraySum();
+         array.checkString();
+         array.checkNumber();
+         array.grille();
+         System.out.println();
+         array.displayWithoutNumber();
+         array.secondSmallerNumber();
+         array.copyArray();
+
+         // System.out.println("Cel mai mare numar este: " + op.switchInstruction(4));
+
+     }
+ }
+        /*String text = "FastTrackIt";
+        System.out.println(op.checkText(text));
+
+
+
         printJava();
         printModel();
         System.out.println("Media numerelor este: " + mediaNumerelor(5, 3, 8));
         System.out.println("Restul impartirii este: " + printRest(9, 4));
         System.out.println("Temperatura in grade celsius este: " + temperatura(45));
         System.out.println("Distanta in metrii este: " + distanta(65));
-        System.out.println("Viteza este: " + viteza(2, 20, 57, 100));
-
+        System.out.println("Viteza este: " + viteza(2, 20, 57, 100)); */
+/*
 
     }
 
@@ -66,39 +148,7 @@ public class Main {
         System.out.println(5 + 15 / 3 * 2 - 8 % 3);
     }
 
-    //Exercitiul 2
 
-    public static int adunare(int primulNumar, int alDoileaNumar) {
-
-        int rezultat2 = primulNumar + alDoileaNumar;
-
-        return rezultat2;
-
-    }
-
-    public static int scadere(int primulNumar, int alDoileaNumar) {
-
-        int rezultat3 = primulNumar - alDoileaNumar;
-
-        return rezultat3;
-
-    }
-
-    public static int inmultire(int primulNumar, int alDoileaNumar) {
-
-        int rezultat4 = primulNumar * alDoileaNumar;
-
-        return rezultat4;
-
-    }
-
-    public static double impartire(double primulNumar, double alDoileaNumar) {
-
-        double rezultat5 = primulNumar / alDoileaNumar;
-
-        return rezultat5;
-
-    }
 
     // Exercitiul 3
     public static void printJava() {
@@ -158,4 +208,4 @@ public class Main {
         return rezultat;
 
     }
-}
+} */

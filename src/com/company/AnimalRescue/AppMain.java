@@ -1,4 +1,4 @@
-package com.company.AnimalRescue;
+/* package com.company.AnimalRescue;
 
 public class AppMain {
     public static void main (String[] args) {
@@ -34,3 +34,4 @@ public class AppMain {
 
     }
 }
+*/
