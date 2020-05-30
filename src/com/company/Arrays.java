@@ -1,82 +1,90 @@
 package com.company;
-import java.util.stream.IntStream;
 
 public class Arrays {
 
-    public void write() {
-        int array[] = new int[100];
+
+    public int[] getArrayToHundred() {
+
+        int[] myArray = new int[100];
+
         for (int i = 1; i <= 100; i++) {
-            System.out.println(i);
+
+            myArray[i - 1] = i;
         }
+        return myArray;
     }
 
-    public void evenNumber() {
-        int array[] = new int[100];
-        for (int i = 1; i <= 100; i++)
-            if (i % 2 == 0)
-                System.out.println(i);
+    public int[] evenNumber(int[] evenArray) {
+        int j=0;
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                evenArray[j] = i;
+                j++;
+            }
+        }
+        return evenArray;
+
 
     }
 
-    public void arraySum() {
-        int[] s = {4, 6, 8, 9, 12, 20};
+    public float arrayAverage(int[] myArray) {
         float sum = 0;
-        for (int i = 0; i < s.length; i++) {
-            sum += s[i];
+        for (int i = 0; i < myArray.length; i++) {
+            sum += myArray[i];
         }
-        System.out.println("Sum of given array is " + sum);
-        float average = sum / s.length;
-        System.out.println("Average of given array is " + average);
+        return (sum/myArray.length);
     }
 
 
-    public void checkString() {
-        String[] s = {"a", "b", "c", "d", "e", "r"};
-        String n = "e";
-        for (int i = 0; i < s.length; i++) {
-            if (s[i] == n)
-                System.out.println(s[i] + " = " + true);
-            else
-                System.out.println(s[i] + " = " + false);
-        }
+    public boolean checkString(String[] arrString, String n) {
+        //String[] s = {"a", "b", "c", "d", "e", "r"};
+        //String n = "e";
+        for (int i = 0; i < arrString.length; i++) {
+            if (arrString[i].equals(n)){
+                return true;
+            }
 
+        }
+            return false;
     }
 
-    public void checkNumber() {
-        int[] m = {4, 5, 8, 10, 6};
-        int n = 6;
+    public int checkNumber(int[] m, int n) {
         int index = 0;
         for (int i = 0; i < m.length; i++) {
             if (m[i] == n) {
                 index = i;
-                System.out.println("Pozitia pe care se afla numarul este: " + index);
             }
         }
+        return index;
     }
 
-    public void grille() {
-        String[] n = {"-"};
-        for (int i = 10; i >= 1; i--) {
-            System.out.println();
-            {
-                for (int j = 1; j <= 10; j++)
-                    System.out.print("-");
+    public void drawLines() {
 
-            }
+        char[] line = {'-', '-', '-', '-', '-', '-', '-', '-', '-', '-',};
+
+
+
+        for (int i = 0; i <= 10; i++) {
+
+            System.out.println(line);
+
         }
+
     }
 
-    public void displayWithoutNumber() {
-        int[] m = {4, 5, 8, 10, 6};
-        int n = 8;
-        int index = 0;
+
+    public int[] displayWithoutNumber(int[] m, int nr) {
+        int[] secondArray = new int[m.length];
+        int j = 0;
         for (int i = 0; i < m.length; i++) {
-            if (m[i] != n) {
-                index = i;
-                System.out.println(m[i]);
-            }
+            if (m[i] == nr)
+                continue;
+            secondArray[j++] = m[i];
         }
-
+        int[] finArray = new int[j];
+        for (int i = 0; i < j; i++)
+            finArray[i] = secondArray[i];
+        return finArray;
     }
 
     public void secondSmallerNumber() {
@@ -110,7 +118,61 @@ public class Arrays {
             System.out.print(b[i] + " ");
     }
 
+
+    public static void addElement()
+    {
+        int arr[] = {8, 2, 6, 4, 5, 6, 7, 12, 9, 10};
+        int x = 20;
+        int[] newarr;
+        newarr = new int[arr.length + 1];
+        newarr=arr;
+        int i;
+
+        System.out.println("\n\nValorile primului array sunt: ");
+        for (i=0; i<arr.length; i++)
+            System.out.print(arr[i] + " ");
+
+
+        newarr[5] = x;
+
+        System.out.println("\n\nValorile celui de-al doilea array sunt: ");
+        for (i=0; i<newarr.length; i++)
+            System.out.print(newarr[i] + " ");
+
+        }
+
+    public static void minMax(){
+
+        int arr[] = {8, 2, 6, 25, 5, 6, 20, 12, 9, 10};
+        int min = arr[0];
+        int max = arr[0];
+        for (int i=0; i<arr.length; i++){
+            if(arr[i]<=min)
+                min=arr[i];
+            if(arr[i]>=max)
+                max=arr[i];
+        }
+        System.out.print("\n Minimul este: "+ min);
+        System.out.print("\n Maximul este: "+ max);
+    }
+
+    public static void Reverse() {
+
+        int arr[] = {8, 2, 6, 25, 5, 6, 20, 12, 9, 10};
+
+
+    }
+
+    public void printArray(int[] array){
+        for (int i = 0; i < array.length; i++){
+            System.out.println(array[i]);
+        }
+    }
+
+
 }
+
+
 
 
 

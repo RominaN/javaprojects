@@ -10,28 +10,27 @@ package com.company;
         printOp(); */
 
          Calculator calc = new Calculator();
-         System.out.println("Rezultatul adunarii este: " + calc.add(5, 3));
+         /*System.out.println("Rezultatul adunarii este: " + calc.add(5, 3));
          System.out.println("Rezultatul adunarii cu trei paramentrii este: " + calc.add(2,3,2));
          System.out.println("Rezultatul adunarii cu variabile de tip float este: " + calc.add(5.7,3));
-
          System.out.println("Rezultatul scaderii este: " + calc.scadere(5, 3));
          System.out.println("Rezultatul inmultirii este: " + calc.inmultire(5, 3));
          System.out.println("Rezultatul impartirii este: " + calc.impartire(5, 3));
-         System.out.println();
+         System.out.println(); */
 
          LogicalOp op = new LogicalOp();
-         int biggest = op.checkBiggerNumber(8, 5);
-         System.out.println("Cel mai mare numar este: " + biggest);
+         //int biggest = op.checkBiggerNumber(8, 5);
+         //System.out.println("Cel mai mare numar este: " + biggest);
 
-         String vorbe = op.checkText("FastTrackIt");
-         System.out.println(vorbe);
+         //String vorbe = op.checkText("FastTrackIt");
+         //System.out.println(vorbe);
 
          Loops lb4 = new Loops();
          //int numar = 5;
          //lb4.display (numar);
          //int numar2 = 50;
           // lb4.displayMinus(numar2);
-         lb4.counting(-5,10);
+         /* lb4.counting(-5,10);
          System.out.println("exercitiul 4");
          lb4.comparing(5,3);
          System.out.println("exercitiul 5");
@@ -71,20 +70,33 @@ package com.company;
          lb4.fibonacci();
 
          System.out.println("exercitiul 10 while");
-         lb4.CozaLozaWoza();
+         lb4.CozaLozaWoza(); */
 
          System.out.println();
-         Arrays array = new Arrays();
-         array.write();
-         array.evenNumber();
-         array.arraySum();
-         array.checkString();
-         array.checkNumber();
-         array.grille();
-         System.out.println();
-         array.displayWithoutNumber();
-         array.secondSmallerNumber();
-         array.copyArray();
+         Arrays arr = new Arrays();
+         int[] myArray = arr.getArrayToHundred();
+         arr.printArray(myArray);
+         
+         int[] evenArrays = arr.evenNumber (new int[50]);
+         arr.printArray(evenArrays);
+
+         int[] sir = new int[]{4, 6, 8, 9, 12, 20};
+         System.out.println("Media numerelor este: " + arr.arrayAverage(sir));
+
+
+         System.out.println("Valoarea stringului se regaseste in array: " + arr.checkString(new String[]{"a", "b", "c", "d", "e", "r"}, "f"));
+
+         System.out.println("Pozitia pe care se afla numarul este: " + arr.checkNumber(new int[] {4, 5, 8, 10, 6}, 6));
+
+
+         arr.drawLines();
+
+         System.out.println("Sirul m fara numarul n este: "+ arr.displayWithoutNumber(new int[] {4,5,8,10,6},4));
+
+      arr.secondSmallerNumber();
+         arr.copyArray();
+         arr.addElement();
+         arr.minMax();
 
          // System.out.println("Cel mai mare numar este: " + op.switchInstruction(4));
 
